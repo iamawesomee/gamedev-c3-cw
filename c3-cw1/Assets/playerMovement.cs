@@ -20,16 +20,16 @@ public class playerMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        SceneManager.LoadScene("Lvl2");
+        
 
-       // if (other.gameObject.tag == "finish 1") {
-            //SceneManager.LoadScene("jumpscare"); 
-       // } 
+        if (other.gameObject.tag == "Finish") {
+            SceneManager.LoadScene("jumpscare"); 
+         } 
 
-        //else {
-           // SceneManager.LoadScene("Lvl2");
+        else {
+            SceneManager.LoadScene("Lvl2");
 
-       // }
+        }
     }
 
     
