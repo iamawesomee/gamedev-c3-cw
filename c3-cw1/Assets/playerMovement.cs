@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class playerMovement : MonoBehaviour
 {
+    
+
     void OnMouseDrag(){
         Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 playerPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -17,8 +20,19 @@ public class playerMovement : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        SceneManager.LoadScene("jumpscare");
+        SceneManager.LoadScene("Lvl2");
+
+       // if (other.gameObject.tag == "finish 1") {
+            //SceneManager.LoadScene("jumpscare"); 
+       // } 
+
+        //else {
+           // SceneManager.LoadScene("Lvl2");
+
+       // }
     }
+
+    
 
 
 
